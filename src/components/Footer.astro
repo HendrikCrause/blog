@@ -2,7 +2,9 @@
 const today = new Date()
 ---
 
-<footer>
+<footer
+  class="bg-gradient-to-b from-slate-800 to-slate-900 pb-16 pt-8 text-center text-slate-300"
+>
   &copy; {today.getFullYear()} Hendrik Crause. All rights reserved.
   <div class="social-links">
     <a href="https://x.com/HendrikCrause" target="_blank">
@@ -37,10 +39,8 @@ const today = new Date()
 </footer>
 <style>
   footer {
-    padding: 2em 1em 6em 1em;
-    background: linear-gradient(var(--gray-gradient)) no-repeat;
-    color: rgb(var(--gray));
-    text-align: center;
+    /* padding: 2em 1em 6em 1em; */
+    /* background: linear-gradient(var(--gray-gradient)) no-repeat; */
   }
   .social-links {
     display: flex;

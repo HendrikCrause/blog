@@ -1,18 +1,41 @@
 ---
-import HeaderLink from './HeaderLink.astro'
 import { SITE_TITLE } from '../consts'
 import { resolve } from '../urls'
 ---
 
-<header>
-  <nav>
-    <h2><a href={resolve('/')}>{SITE_TITLE}</a></h2>
-    <div class="internal-links">
-      <HeaderLink href={resolve('/')}>Home</HeaderLink>
-      <HeaderLink href={resolve('articles')}>Articles</HeaderLink>
-      <HeaderLink href={resolve('about')}>About</HeaderLink>
-    </div>
-    <div class="social-links">
+<header class="bg-slate-800 px-4 py-0 text-slate-200">
+  <nav
+    class="mx-auto flex max-w-7xl flex-col items-center gap-8 p-8 md:flex-row md:justify-between"
+  >
+    <a
+      href={resolve('/')}
+      class="flex flex-row items-center justify-center gap-4"
+    >
+      <div class="aspect-square h-full">
+        <svg
+          class="w-16"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3 8.2C3 7.07989 3 6.51984 3.21799 6.09202C3.40973 5.71569 3.71569 5.40973 4.09202 5.21799C4.51984 5 5.0799 5 6.2 5H17.8C18.9201 5 19.4802 5 19.908 5.21799C20.2843 5.40973 20.5903 5.71569 20.782 6.09202C21 6.51984 21 7.07989 21 8.2V15.8C21 16.9201 21 17.4802 20.782 17.908C20.5903 18.2843 20.2843 18.5903 19.908 18.782C19.4802 19 18.9201 19 17.8 19H6.2C5.07989 19 4.51984 19 4.09202 18.782C3.71569 18.5903 3.40973 18.2843 3.21799 17.908C3 17.4802 3 16.9201 3 15.8V8.2Z"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+          <path
+            d="M10 9L7 12L10 15M14 9L17 12L14 15"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </svg>
+      </div>
+      <span class="text-3xl md:text-4xl">{SITE_TITLE}</span>
+    </a>
+
+    <div class="flex flex-row gap-4">
       <a href="https://x.com/HendrikCrause" target="_blank">
         <span class="sr-only">Follow Me on X</span>
         <svg
@@ -44,44 +67,3 @@ import { resolve } from '../urls'
     </div>
   </nav>
 </header>
-<style>
-  header {
-    margin: 0;
-    padding: 0 1em;
-    background: white;
-    box-shadow: 0 2px 8px rgba(var(--black), 5%);
-  }
-  h2 {
-    margin: 0;
-    font-size: 1em;
-  }
-
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
-  }
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  nav a {
-    padding: 1em 0.5em;
-    color: var(--black);
-    border-bottom: 4px solid transparent;
-    text-decoration: none;
-  }
-  nav a.active {
-    text-decoration: none;
-    border-bottom-color: var(--accent);
-  }
-  .social-links,
-  .social-links a {
-    display: flex;
-  }
-  @media (max-width: 720px) {
-    .social-links {
-      display: none;
-    }
-  }
-</style>
