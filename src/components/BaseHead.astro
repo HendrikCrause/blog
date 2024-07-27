@@ -12,7 +12,11 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
-const { title, description, image = 'favicon.svg' } = Astro.props
+const {
+  title,
+  description,
+  image = 'images/ai_gen_code_editor.webp',
+} = Astro.props
 ---
 
 <!-- Global Metadata -->
