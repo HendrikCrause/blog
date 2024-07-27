@@ -8,7 +8,8 @@ import { resolve } from '../urls'
 
 type Props = CollectionEntry<'articles'>['data']
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props
+const { title, description, pubDate, updatedDate, heroImage, author } =
+  Astro.props
 ---
 
 <html lang="en">
@@ -45,8 +46,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props
                 )
               }
             </div>
-            <h1 class="py-4 text-4xl text-white">{title}</h1>
-            <hr class="border-slate-600" />
+            <h1 class="m-0 pb-0 pt-5 text-4xl text-white">{title}</h1>
+            <p class="m-0 pb-4 text-slate-400">{author}</p>
+            <p>{description}</p>
+            <hr class="my-8 border-slate-600" />
           </div>
           <slot />
         </div>

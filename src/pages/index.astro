@@ -19,26 +19,33 @@ const posts = (await getCollection('articles')).sort(
   </head>
   <body class="w-full bg-zinc-900 text-slate-100">
     <Header />
-    <main class="m-auto max-w-3xl px-6 py-6">
+    <main class="m-auto max-w-5xl px-6 py-6">
       <section>
         <ul>
           {
             posts.map((post) => (
               <li class="py-10">
                 <a href={resolve('article/' + post.slug)}>
-                  <img
-                    width={1020}
-                    height={510}
-                    src={
-                      post.data.heroImage ? resolve(post.data.heroImage) : ''
-                    }
-                    alt=""
-                  />
-                  <div class="flex w-full justify-between pt-3">
-                    <h4 class="text-3xl text-white">{post.data.title}</h4>
-                    <p class="mb-2 text-slate-300">
-                      <FormattedDate date={post.data.pubDate} />
-                    </p>
+                  <div class="grid grid-cols-2 gap-10 rounded-lg p-8 shadow-lg shadow-zinc-800">
+                    <div class="flex h-full flex-col justify-around">
+                      <div class="flex w-full justify-between text-slate-400">
+                        <p class="text-slate-400">{post.data.author}</p>
+                        <FormattedDate date={post.data.pubDate} />
+                      </div>
+                      <h1 class="text-4xl font-extrabold text-white">
+                        {post.data.title}
+                      </h1>
+                      <p>{post.data.description}</p>
+                    </div>
+                    {post.data.heroImage && (
+                      <img
+                        class="mx-auto my-0 block rounded-xl"
+                        width={1020}
+                        height={510}
+                        src={resolve(post.data.heroImage)}
+                        alt=""
+                      />
+                    )}
                   </div>
                 </a>
               </li>
