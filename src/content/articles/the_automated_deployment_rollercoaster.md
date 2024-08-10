@@ -14,7 +14,7 @@ Before we discuss autmated deployments though, lets take a quick detour to discu
 2. A user's device
 3. A server
 
-And how code is deployed depends on where it will execute. On your own devices it's usually just making sure you have all the executables are available and then issuing the command to start. Getting code to execute on a user's device means that your user's need to somehow get hold of the software and then issue whatever command needed to start. This means either have them install your software and open it up when they want, or let them download and execute it whenever they visit your site (webapps essentially). Executing code on a server means you need to somehow access the server, load all the required software onto it and issue the commands to make it start. For most modern applications, you will need to deploy your code to all 3.
+And how code is deployed depends on where it will execute. On your own devices it's usually just making sure all the executables are available and then issuing the command to start. Getting code to execute on a user's device means that your user's need to somehow get hold of the software and then issue whatever command needed to start. This means either have them install your software and open it up when they want, or let them download and execute it whenever they visit your site (webapps essentially). Executing code on a server means you need to somehow access the server, load all the required software onto it and issue the commands to make it start. For most modern applications, you will need to deploy your code to all 3.
 
 ## Setting it all up
 
@@ -27,7 +27,7 @@ Now here comes the first difficulty when trying to automate the deployment proce
 - How will a user get hold of the software?
 - Etc...
 
-Luckily for us most of these are dependent on each other, so getting answers to all these out won't be that difficult. But it is still important to consider all or at least most of them at some point during the process.
+Luckily for us most of these are dependent on each other, so figuring it all out won't be that difficult. But it is still important to consider all or at least most of them at some point during the process.
 
 Once you've figured out how your software will be deployed if done manually... you then get to explore all the hundreds of different tools that have been developed over the years to "ease" the burden of deployment. Some frameworks comes with these processes baked-in, so that helps a little. Things like Docker, Teraform, Github actions, Kubernetes, every cloud provider's custom tool that you have to learn and setup, whichever package manager and build tools your language uses, and... you get the point. For the most part, none of these individually are especially difficult to learn the basics of, but because there are so many of them and because they need to integrate with each other, the complexity of getting everything to work smoothly together can increase drastically. All this complexity has spawned entire companies dedicated to making deployments simple, given you only use the tools they provide exactly the way they provide it.
 
