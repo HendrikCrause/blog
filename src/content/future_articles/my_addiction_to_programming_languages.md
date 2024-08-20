@@ -1,7 +1,7 @@
 ---
 title: 'My addiction to learning programming languages'
-description: ''
-pubDate: '2024-07-23'
-heroImage: 'images/marriage_fp_oop.webp'
+description: 'Some personal anecdotes about trying to find focus and mastery, while at the same time exploring new ideas'
+pubDate: '2024-08-19'
+heroImage: 'images/language_bar.webp'
 author: Hendrik Crause
 ---
