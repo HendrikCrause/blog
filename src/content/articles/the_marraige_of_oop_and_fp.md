@@ -113,5 +113,6 @@ __Monads__
 #### Learn your Language features
 The final piece of advice is to learn as much as you can about the features your particular language provides as well as how those features are implemented. Every feature you learn about is like a new tool you keep on your belt. With time and practice you'll learn how and when to best use those tools to craft the best software you can.
 
+### Final thoughts
 
 So the next time you encounter an argument for why one paradigm might be better than another, hopefully you'll realise that both are simply a different way of thinking about software. You can even switch between thinking about how your software is structured (OOP) and how the software flows (FP) within the same project. As long as we keep on learning, improving and building good software. 
